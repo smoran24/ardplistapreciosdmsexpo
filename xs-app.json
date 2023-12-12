@@ -3,38 +3,38 @@
   "authenticationMethod": "route",
   "routes": [
     {
-        "source": "^/destinations/AR_DP_DEST_ODATA/(.*)$",
-        "target": "$1",
-        "authenticationType": "xsuaa",
-        "destination": "AR_DP_DEST_ODATA",
-        "csrfProtection": false
-      },
-      {
-        "source": "^/destinations/AR_DP_REP_DEST_HANA/(.*)$",
-        "target": "$1",
-        "authenticationType": "xsuaa",
-        "destination": "AR_DP_REP_DEST_HANA",
-        "csrfProtection": false
-      },
-      {
-        "source": "^/services/userapi(.*)",
-        "target": "$1",
-        "service": "sap-approuter-userapi"
-      },
-      {
-        "source": "^/destinations/IDP_Nissan/(.*)$",
-        "target": "$1",
-        "authenticationType": "xsuaa",
-        "destination": "IDP_Nissan",
-        "csrfProtection": false
-      },
-      {
-        "source": "^/destinations/AR_DP_DEST_CPI/(.*)$",
-        "target": "$1",
-        "authenticationType": "xsuaa",
-        "destination": "AR_DP_DEST_CPI",
-        "csrfProtection": false
-      },       
+      "source": "^/destinations/AR_DP_DEST_ODATA/(.*)$",
+      "target": "$1",
+      "authenticationType": "xsuaa",
+      "destination": "ODataProvisioningQAS",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/destinations/AR_DP_DEST_HANA/(.*)$",
+      "target": "$1",
+      "authenticationType": "xsuaa",
+      "destination": "AR_DP_DEST_HANA_EXPO",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/services/userapi(.*)",
+      "target": "$1",
+      "service": "sap-approuter-userapi"
+    },
+    {
+      "source": "^/destinations/IDP_Nissan/(.*)$",
+      "target": "$1",
+      "authenticationType": "basic",
+      "destination": "IDP_Nissan",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/destinations/AR_DP_DEST_CPI/(.*)$",
+      "target": "$1",
+      "authenticationType": "basic",
+      "destination": "AR_DP_DEST_CPI_QAS_NEO",
+      "csrfProtection": false
+    },
     {
       "source": "^/resources/(.*)$",
       "target": "/resources/$1",
